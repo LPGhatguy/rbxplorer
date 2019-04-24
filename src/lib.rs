@@ -5,15 +5,6 @@ use rbx_dom_weak::{RbxTree, RbxId, RbxValue, RbxInstance, RbxInstanceProperties}
 use serde_derive::{Serialize, Deserialize};
 
 #[wasm_bindgen]
-extern "C" {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-#[derive(Serialize, Deserialize)]
-pub struct JsRbxId(RbxId);
-
-#[wasm_bindgen]
 #[derive(Serialize, Deserialize)]
 pub struct JsRbxValue(RbxValue);
 
@@ -57,12 +48,7 @@ impl JsRbxInstance {
     }
 
     pub fn get_children_ids(&self) -> JsValue {
-        let ids: Vec<JsRbxId> = self.0
-            .get_children_ids()
-            .iter()
-            .cloned()
-            .map(|value| JsRbxId(value))
-            .collect();
+        let ids = self.0.get_children_ids().to_vec();
 
         JsValue::from_serde(&ids).unwrap()
     }
