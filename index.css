@@ -1,0 +1,56 @@
+* {
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+html {
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#root {
+	margin: 0 auto;
+	max-width: 60rem;
+}
+
+.RobloxInstance {
+	border: 1px solid #666;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	background-color: #efefef;
+	box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.RobloxInstance-name {
+	font-size: 1.8rem;
+	padding-bottom: 0.5rem;
+}
+
+.RobloxInstance-propertiesTitle {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.RobloxInstance-properties {
+	margin-left: 1rem;
+	border: 1px solid #aaa;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.RobloxInstance-propertyName {
+	display: inline-block;
+	padding-right: 0.5rem;
+}
+
+.RobloxInstance-childrenTitle {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.RobloxInstance-children {
+	margin-left: 1rem;
+}

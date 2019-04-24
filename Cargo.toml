@@ -1,0 +1,19 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+authors = ["Lucien Greathouse <me@lpghatguy.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.42", features = ["serde-serialize"] }
+rbx_dom_weak = "1.0"
+rbx_xml = "0.6"
+uuid = { version = "0.7", features = ["wasm-bindgen"] }
+serde = "1.0"
+serde_derive = "1.0"
+
+[profile.dev]
+opt-level = 2
